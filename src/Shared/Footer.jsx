@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../public/logo.png'
 import { FaFacebookF, FaHome, FaInstagram, FaPhone, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import { TbWorld } from "react-icons/tb";
 
 const Footer = () => {
     return (
-        <div className="py-16 px-2 bg-Primary text-white">
+        <div className="pt-16 pb-8 px-2 bg-Primary text-white">
             <div className="container mx-auto flex flex-col md:flex-row gap-10">
                 <div className="w-full md:w-1/2 space-y-3 md:p-2">
-                    <img className='bg-slate-700 md:w-1/2 bg-opacity-30 rounded-md' src={logo} alt="" />
-                    <p>
+                    <img className=' mx-auto md:w-1/2' src={logo} alt="" />
+                    <p className='text-Second text-cener'>
                         At KiddieKorner, we are passionate about nurturing young minds through play, offering a curated collection of high-quality toys that inspire creativity, spark imagination, and promote learning. With a commitment to safety, innovation, and fun, we are here to accompany your little ones on their journey of growth and discovery.
                     </p>
                 </div>
@@ -17,11 +18,11 @@ const Footer = () => {
                     <div className='w-full md:w-1/2'>
                         <h5 className='font-bold text-xl mb-5'>Useful Links</h5>
                         <ul className='text-Second'>
-                            <li><Link to={'/'}>Home</Link></li>
-                            <li><Link to={'/'}>About us</Link></li>
-                            <li><Link to={'/'}>Profile</Link></li>
-                            <li><Link to={'/'}>Add product</Link></li>
-                            <li><Link to={'/'}>My Cart</Link></li>
+                            <li><Link to={'/'}>Returns & Exchanges</Link></li>
+                            <li><Link to={'/'}>Privacy Policy</Link></li>
+                            <li><Link to={'/'}>Terms of Service</Link></li>
+                            <li><Link to={'/'}>FAQ</Link></li>
+                            <li><Link to={'/'}>Blog</Link></li>
                         </ul>
                     </div>
                     <div className='w-full md:w-1/2'>
@@ -38,6 +39,10 @@ const Footer = () => {
                             <div className='flex gap-3 items-center'>
                                 <FaPhone className='inline-block text-xl'></FaPhone>
                                 <p>+8801575-235909</p>
+                            </div>
+                            <div className='flex gap-3 items-center'>
+                                <TbWorld className='inline-block text-xl'></TbWorld>
+                                <p>https://www.kiddiekorner.com</p>
                             </div>
                             <div className='flex gap-3 pt-6 items-center'>
                                 <Link className='rounded-full h-10 flex w-10 justify-center items-center hover:bg-blue-500 bg-slate-400 text-gray-300 hover:text-white duration-150 hover:shadow-lg' to={'/'}>

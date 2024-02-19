@@ -2,3 +2,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+#NavItems ul li a.active{
+  font-weight: 600;
+  color: #fff;
+  background: none;
+}
+
+
+#NavItems ul li a:hover{
+  position: relative;
+  z-index: 1;
+}
+#NavItems ul li a:focus{
+  background: none;
+}
+#NavItems ul li a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0px;
+  width: 0;
+  background: #fff;
+  /* z-index: -1; */
+  transition:ease-in-out 0.3s;
+  /* overflow: hidden; */
+}
+#NavItems ul li a:hover:after{
+  height: 8%;
+  width: 100%;
+}
+#NavItems ul li a.active::after{
+  height: 8%;
+  width: 100%;
+}
