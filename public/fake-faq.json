@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "question": "What age range are your toys suitable for?",
+      "answer": "Our toys are designed for various age groups, from newborns to toddlers and beyond. Each product description includes recommended age ranges to help you choose the most appropriate toys for your child's developmental stage."
+    },
+    {
+      "id": 2,
+      "question": "Are your toys safe for infants and toddlers?",
+      "answer": "Yes, safety is our top priority. Our toys undergo rigorous testing to meet and exceed safety standards set by regulatory authorities. We use non-toxic materials and ensure that our products are free from choking hazards to provide a safe play experience for infants and toddlers."
+    },
+    {
+      "id": 4,
+      "question": "What is your shipping policy?",
+      "answer": "We offer fast and reliable shipping options to deliver your order conveniently to your doorstep. Shipping rates and delivery times may vary depending on your location and chosen shipping method. Please refer to our shipping policy for more details."
+    },
+    {
+      "id": 5,
+      "question": "Do you offer gift wrapping services?",
+      "answer": "Yes, we offer gift wrapping services to add a special touch to your purchase. Simply select the gift wrapping option during checkout, and our team will ensure that your order is beautifully wrapped before being shipped."
+    },
+    {
+      "id": 6,
+      "question": "How can I contact your customer service team?",
+      "answer": "Our customer service team is here to assist you with any questions or concerns you may have. You can reach us via email at support@kiddiekorner.com or by phone at 1-800-123-4567. We strive to provide prompt and helpful assistance to ensure your satisfaction."
+    }
+  ]
+  

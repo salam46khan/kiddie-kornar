@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "reason": "Safety First",
+        "details": " Emphasize your commitment to safety standards and the use of non-toxic materials in all your toys of mind to parents"
+    },
+    {
+        "id": 2,
+        "reason": "Quality Assurance",
+        "details": "Highlight the superior quality of your products, ensuring durability and longevity for years of playtime enjoyment"
+    },
+    {
+        "id": 3,
+        "reason": "Innovative Designs",
+        "details": "Feature unique and innovative toy designs that captivate children's imaginations and stand out from traditional offerings"
+    },
+    {
+        "id": 4,
+        "reason": "Customer Satisfaction",
+        "details": "Boast exceptional customer service, including fast shipping, easy returns to ensure a positive shopping experience"
+    },
+    {
+        "id": 5,
+        "reason": "Passionate Team",
+        "details": "Introduce your dedicated team of toy experts who are passionate about creating the best possible play experiences "
+    },
+    {
+        "id": 6,
+        "reason": "Value for Money",
+        "details": "Highlight the value proposition of your products, providing high-quality toys at affordable prices compared to competitors"
+    }
+]

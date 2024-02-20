@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name": "Amelia Androson",
+        "img": "https://i.ibb.co/ZmX9d34/team-1.jpg",
+        "post": "Lead Designer",
+        "fb": "www.facebook.com",
+        "twi": "www.twiteer.com",
+        "ins": "www.instagram.com"
+    },
+    {
+        "id":2,
+        "name": "Salam Khan",
+        "img": "https://i.ibb.co/2NbD2KC/team-2.png",
+        "post": "Founder",
+        "fb": "www.facebook.com",
+        "twi": "www.twiteer.com",
+        "ins": "www.instagram.com"
+    },
+    {
+        "id":3,
+        "name": "Mr. Jhon",
+        "img": "https://i.ibb.co/D7gW3zR/team-3.jpg",
+        "post": "Customer Service Manager",
+        "fb": "www.facebook.com",
+        "twi": "www.twiteer.com",
+        "ins": "www.instagram.com"
+    }
+]
+
