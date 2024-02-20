@@ -15,46 +15,49 @@ const Brand = () => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
-      };
+    };
     return (
-        <div className='py-5 container mx-auto'>
-            <Slider {...settings} className="relative flex items-center justify-center gap-3 w-full overflow-hidden">
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand1}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand2}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand3}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand4}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand5}
-                />
-                <img
-                    className="md:p-10 p-2 my-auto grayscale hover:grayscale-0  duration-300"
-                    src={brand6}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand7}
-                />
-                <img
-                    className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
-                    src={brand8}
-                />
-                
+        <div className='py-5'>
+            <div className=' container mx-auto'>
+                <Slider {...settings} className="relative flex items-center justify-center gap-3 w-full overflow-hidden">
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand1}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand2}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand3}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand4}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand5}
+                    />
+                    <img
+                        className="md:p-10 p-2 my-auto grayscale hover:grayscale-0  duration-300"
+                        src={brand6}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand7}
+                    />
+                    <img
+                        className="md:p-10 p-2 grayscale hover:grayscale-0  duration-300"
+                        src={brand8}
+                    />
 
-            </Slider>
+
+                </Slider>
+            </div>
         </div>
+
     );
 };
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import baby1 from '../../assets/img/baby-play-1-removebg-preview.png'
+import baby1 from '../../assets/img/faq.png'
 import { useEffect } from 'react';
 import FAQsItem from '../../Components/FAQsItem';
 const FAQs = () => {
@@ -11,8 +11,8 @@ const FAQs = () => {
             .then(data => setFaq(data))
     }, [])
     return (
-        <div className="py-16 px-2">
-            <div className="container mx-auto flex flex-col md:flex-row">
+        <div className="py-16 px-2 bg-slate-50">
+            <div className="container mx-auto flex flex-col gap-4 md:flex-row">
                 <div className="w-full md:w-2/3">
                     <div className='pb-3 '>
                         <h2 className='text-3xl font-bold'>FAQs</h2>

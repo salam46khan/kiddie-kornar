@@ -11,7 +11,7 @@ const Choose = () => {
         .then(data => setChoose(data))
     },[])
     return (
-        <div className="py-16 px-2">
+        <div className="py-16 px-2 bg-slate-50">
             <div className="container mx-auto">
                 <div className="text-center max-w-lg mx-auto mb-5">
                     <h2 className="text-4xl font-bold">Why Choose Us</h2>
