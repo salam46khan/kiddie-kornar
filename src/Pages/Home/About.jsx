@@ -2,7 +2,7 @@ import aboutPic1 from '../../assets/img/ab-1-removebg-preview.png'
 import aboutPic2 from '../../assets/img/ab-2-removebg-preview.png'
 const About = () => {
     return (
-        <div className="py-16 px-2">
+        <div className="py-16 px-2 ">
             <div className="container mx-auto">
                 <div className="flex flex-col gap-4 py-3 md:flex-row">
                     <div className="w-full md:w-2/5">
@@ -16,7 +16,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="md:w-3/5 w-full">
-                        <img src={aboutPic1} alt="" />
+                        <img className='w-5/6' src={aboutPic1} alt="" />
                     </div>
                 </div>
                 <div className="flex flex-col py-3 items-center gap-4 md:flex-row-reverse">
@@ -30,7 +30,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="md:w-3/5 w-full">
-                        <img src={aboutPic2} alt="" />
+                        <img className='w-5/6 ml-auto' src={aboutPic2} alt="" />
                     </div>
                 </div>
             </div>

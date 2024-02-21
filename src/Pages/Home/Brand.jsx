@@ -17,7 +17,7 @@ const Brand = () => {
         autoplaySpeed: 2000,
     };
     return (
-        <div className='py-5'>
+        <div className='py-5 px-2'>
             <div className=' container mx-auto'>
                 <Slider {...settings} className="relative flex items-center justify-center gap-3 w-full overflow-hidden">
                     <img

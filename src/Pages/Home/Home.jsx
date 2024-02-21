@@ -5,6 +5,7 @@ import Call from "./Call";
 import Choose from "./Choose";
 import Contact from "./Contact";
 import FAQs from "./FAQs";
+import ProductSec from "./ProductSec";
 import Team from "./Team";
 import Testimonial from "./Testimonial";
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Brand></Brand>
             <Choose></Choose>
+            <ProductSec></ProductSec>
             <Testimonial></Testimonial>
             <Team></Team>
             <FAQs></FAQs>

@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "name": "Plush Elephant Toy",
+      "type": "Stuffed Animal",
+      "price": 19.99,
+      "rating": 4.5,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/plush-elephant.jpg",
+      "details": "Soft and cuddly plush elephant toy perfect for bedtime snuggles. Made with high-quality materials and safety-tested for infants and toddlers."
+    },
+    {
+      "id": 2,
+      "name": "Wooden Alphabet Blocks",
+      "type": "Educational Toy",
+      "price": 29.99,
+      "rating": 4.8,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/alphabet-blocks.jpg",
+      "details": "Set of wooden alphabet blocks featuring colorful letters and numbers. Helps children learn the alphabet, numbers, and basic spelling in a fun and interactive way."
+    },
+    {
+      "id": 3,
+      "name": "Musical Baby Rattle",
+      "type": "Rattle",
+      "price": 12.99,
+      "rating": 4.2,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/baby-rattle.jpg",
+      "details": "Musical baby rattle with colorful beads that make soothing sounds when shaken. Helps stimulate auditory senses and develop fine motor skills in infants."
+    },
+    {
+      "id": 4,
+      "name": "Activity Play Gym",
+      "type": "Play Gym",
+      "price": 49.99,
+      "rating": 4.7,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/play-gym.jpg",
+      "details": "Interactive activity play gym with hanging toys, mirrors, and crinkle fabrics. Promotes sensory exploration, tummy time, and gross motor development in babies."
+    },
+    {
+      "id": 5,
+      "name": "Colorful Stacking Rings",
+      "type": "Stacking Toy",
+      "price": 14.99,
+      "rating": 4.6,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/stacking-rings.jpg",
+      "details": "Set of colorful stacking rings in different sizes. Helps develop hand-eye coordination, spatial awareness, and problem-solving skills in infants and toddlers."
+    },
+    {
+      "id": 6,
+      "name": "Interactive Storybook",
+      "type": "Book",
+      "price": 9.99,
+      "rating": 4.4,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/storybook.jpg",
+      "details": "Interactive storybook with touch-and-feel textures, lift-the-flap surprises, and peek-a-boo windows. Encourages early literacy skills and imagination in young children."
+    },
+    {
+      "id": 7,
+      "name": "Baby Teething Toy",
+      "type": "Teether",
+      "price": 8.99,
+      "rating": 4.3,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/teething-toy.jpg",
+      "details": "BPA-free baby teething toy made with soft silicone material. Features textured surfaces and easy-to-grasp handles to soothe sore gums and promote oral development."
+    },
+    {
+      "id": 8,
+      "name": "Pull-Along Wooden Duck",
+      "type": "Pull Toy",
+      "price": 24.99,
+      "rating": 4.6,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/pull-toy.jpg",
+      "details": "Adorable wooden duck pull toy with colorful wheels and flapping wings. Encourages walking, coordination, and imaginative play in toddlers."
+    },
+    {
+      "id": 9,
+      "name": "Shape Sorting Cube",
+      "type": "Shape Sorter",
+      "price": 16.99,
+      "rating": 4.5,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/shape-sorter.jpg",
+      "details": "Classic shape sorting cube with 12 colorful shapes and a sturdy wooden frame. Helps develop fine motor skills, shape recognition, and problem-solving abilities."
+    },
+    {
+      "id": 10,
+      "name": "Baby Sensory Ball",
+      "type": "Sensory Toy",
+      "price": 11.99,
+      "rating": 4.4,
+      "brand": "KiddieKorner",
+      "image": "https://example.com/sensory-ball.jpg",
+      "details": "Soft and squishy sensory ball with various textures and patterns. Stimulates tactile senses, hand-eye coordination, and exploration in infants and toddlers."
+    }
+  ]  

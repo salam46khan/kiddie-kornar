@@ -29,7 +29,7 @@ const Testimonial = () => {
                         <h2 className='font-bold text-4xl text-white'>Testimonial</h2>
                         <p className='text-Second'>Discover a world of wonder and imagination with our delightful collection of toys.</p>
                     </div>
-                    <Slider {...settings} className='pt-10 '>
+                    <Slider {...settings} className='pt-10 overflow-hidden'>
 
                         {
                             test.map(test => <TestimonialCard key={test.id} testi={test}></TestimonialCard>)

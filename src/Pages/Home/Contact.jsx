@@ -10,9 +10,12 @@ const Contact = () => {
             <div className="container mx-auto">
                 <div className="relative md:pt-16">
                     <div className="md:absolute top-0 left-1/2 md:-translate-x-1/2 md:w-2/3 py-3 md:py-0 ">
-                        <div className="grid z-40 grid-cols-2 md:grid-cols-4 justify-center gap-3">
-                            <div className="max-w-[200px] bg-slate-300 h-[140px] text-center">
-                                <div className="border mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
+                        {/* <div className="grid z-40 grid-cols-2 md:grid-cols-4 justify-around gap-3 border"> */}
+                        <div className="flex flex-wrap md:flex-nowrap justify-around gap-5">
+
+
+                            <div className="w-5/6 md:w-1/4 bg-slate-300 py-2 text-center">
+                                <div className=" mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
                                     <FaLocationDot />
                                 </div>
                                 <p className="font-bold text-xl ">Office Area</p>
@@ -21,8 +24,8 @@ const Contact = () => {
                                     <p>Bangladesh</p>
                                 </div>
                             </div>
-                            <div className="max-w-[200px] bg-slate-300 h-[140px] text-center">
-                                <div className="border mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
+                            <div className="w-10/12 md:w-1/4 bg-slate-300 py-2 text-center">
+                                <div className=" mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
                                     <FaPhoneAlt />
                                 </div>
                                 <p className="font-bold text-xl ">Phone Number</p>
@@ -31,8 +34,8 @@ const Contact = () => {
                                     <p>+8801771-393709</p>
                                 </div>
                             </div>
-                            <div className="max-w-[200px] bg-slate-300 h-[140px] text-center">
-                                <div className="border mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
+                            <div className="w-5/6 md:w-1/4 bg-slate-300 py-2 text-center">
+                                <div className=" mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
                                     <IoIosMail />
                                 </div>
                                 <p className="font-bold text-xl ">Email</p>
@@ -40,8 +43,8 @@ const Contact = () => {
                                     <p>kiddie-kornar@gmail.com</p>
                                 </div>
                             </div>
-                            <div className="max-w-[200px] bg-slate-300 h-[140px] text-center">
-                                <div className="border mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
+                            <div className="w-5/6 md:w-1/4 bg-slate-300 py-2 text-center">
+                                <div className=" mx-auto rounded-full bg-slate-200 text-slate-300 text-2xl mt-3 h-9 w-9 flex justify-center items-center">
                                     <TbWorldWww />
                                 </div>
                                 <p className="font-bold text-xl ">Web site</p>
