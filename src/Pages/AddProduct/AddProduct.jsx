@@ -1,8 +1,12 @@
+import PageTitle from "../../Components/PageTitle";
 
 const AddProduct = () => {
     return (
         <div>
-            <p>add product</p>
+            <PageTitle title={'Add-Product'}></PageTitle>
+            <div>
+
+            </div>
         </div>
     );
 };

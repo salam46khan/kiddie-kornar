@@ -52,3 +52,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.pageTitle{
+  background-image: linear-gradient(#37517E, rgba(0,0,0,0.5)), url('./assets/img/b-5.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200px;
+}

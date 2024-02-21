@@ -7,12 +7,12 @@ import { Rating } from '@smastrom/react-rating';
 const ProductCard = ({ product }) => {
     const { name, price, rating, image } = product;
     return (
-        <div className="bg-slate-100 shadow-md hover:shadow-xl hover:-translate-y-2 duration-200 hover:shadow-gray-300 rounded-md overflow-hidden">
+        <div className="bg-slate-100 border-slate-100 border-4 shadow-md hover:shadow-xl hover:-translate-y-2 duration-200 hover:shadow-gray-300 rounded-md overflow-hidden">
             <div className='h-[200px] z-10 relative overflow-clip pb-1'>
                 <div className='absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 h-16 w-[200%] bg-slate-100 -rotate-6 z-20 border'>
 
                 </div>
-                <img className='h-full w-full hover:scale-125 z-0 object-cover duration-300 border-slate-100' src={image} alt="" />
+                <img className='h-full w-full hover:scale-125 z-0 object-cover duration-300' src={image} alt="" />
             </div>
             <div className='pt-0 p-5 text-center z-50'>
                 <h4 className='text-2xl font-bold'>{name}</h4>

@@ -1,13 +1,27 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../public/logo.png'
 import { FaBars, FaSun, FaUserAlt } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import profile from '../assets/img/profile.jpg'
+import { MdOutlineLogout } from "react-icons/md";
+
+
+
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+
     const navItems = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/add-product'}>Add Product</NavLink></li>
         <li><NavLink to={'/my-cart'}>My Cart</NavLink></li>
-
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(console.log('success'))
+            .catch(error => console.log(error))
+    }
     return (
         <div className="bg-Primary">
             <div className="navbar text-slate-300 container mx-auto" id="NavItems">
@@ -40,9 +54,22 @@ const Navbar = () => {
                     <div className="h-8 w-8 flex justify-center items-center rounded-full bg-slate-100 bg-opacity-50 hover:bg-opacity-30 duration-200">
                         <FaSun></FaSun>
                     </div>
-                    <Link to={'/login'} className="h-8 w-8 flex justify-center items-center rounded-full bg-slate-100 bg-opacity-50 hover:bg-opacity-30 duration-200">
-                        <FaUserAlt className=""></FaUserAlt>
-                    </Link>
+                    {
+                        user ?
+                            <Link to={'/profile'} className="h-8 w-8 flex justify-center items-center rounded-full bg-slate-100 bg-opacity-50 hover:bg-opacity-30 duration-200 tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <img className="rounded-full h-full w-full" src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                            </Link>
+                            :
+                            <Link to={'/login'} className="h-8 w-8 flex justify-center items-center rounded-full bg-slate-100 bg-opacity-50 hover:bg-opacity-30 duration-200">
+                                <FaUserAlt className=""></FaUserAlt>
+                            </Link>
+                    }
+                    {
+                        user ?
+                            <div onClick={handleLogOut} className="h-8 w-8 flex justify-center items-center rounded-full bg-slate-100 bg-opacity-50 hover:bg-opacity-30 duration-200 tooltip-bottom tooltip" data-tip={'Log Out'}>
+                                <MdOutlineLogout />
+                            </div> : <></>
+                    }
                 </div>
             </div>
         </div>
