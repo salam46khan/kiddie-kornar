@@ -107,7 +107,7 @@ const SignUp = () => {
 
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className=' p-3 rounded-md bg-slate-300 hover:bg-slate-400 text-white duration-200 shadow-gray-400 shadow-md hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-lg' type="submit" value="Login" />
+                                    <input className=' p-3 rounded-md bg-slate-300 hover:bg-slate-400 text-white duration-200 shadow-gray-400 shadow-md hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-lg' type="submit" value="Sign Up" />
                                 </div>
                                 <div className="text-red-400 mt-3">
                                     <p>{error ? error : ''}</p>
