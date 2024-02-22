@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import log from '../assets/img/log-removebg-preview.png'
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import GoogleLogin from './GoogleLogin';
 const Login = () => {
     const { logInUser } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -46,6 +47,9 @@ const Login = () => {
                                     <input className=' p-3 rounded-md bg-slate-300 hover:bg-slate-400 text-white duration-200 shadow-gray-400 shadow-md hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-lg' type="submit" value="Login" />
                                 </div>
                             </form>
+                            <div className='mt-5'>
+                                <GoogleLogin></GoogleLogin>
+                            </div>
                             <p className='text-center mt-5'>
                                 Not registerd! <Link className='text-blue-600 font-semibold' to={'/registation'}>Create an accound</Link>
                             </p>

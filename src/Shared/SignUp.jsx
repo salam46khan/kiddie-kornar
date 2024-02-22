@@ -3,6 +3,7 @@ import sign from '../assets/img/sign-removebg-preview.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import GoogleLogin from "./GoogleLogin";
 const SignUp = () => {
     const { createUser } = useContext(AuthContext)
     const [error, setError] = useState('');
@@ -113,6 +114,9 @@ const SignUp = () => {
                                     <p>{error ? error : ''}</p>
                                 </div>
                             </form>
+                            <div className="mt-5">
+                                <GoogleLogin></GoogleLogin>
+                            </div>
                             <p className='text-center mt-5'>
                                 Already have an accound! <Link className='text-blue-600 font-semibold' to={'/login'}>log in</Link>
                             </p>
