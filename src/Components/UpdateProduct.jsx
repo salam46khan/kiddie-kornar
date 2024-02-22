@@ -1,14 +1,34 @@
-import { useContext, useState } from "react";
-import PageTitle from "../../Components/PageTitle";
-import { AuthContext } from "../../Provider/AuthProvider";
-import UseAxios from "../../hooks/UseAxios";
+import { useState } from "react";
+import PageTitle from "./PageTitle";
+import { useParams } from "react-router-dom";
+import UseAxios from "../hooks/UseAxios";
 import Swal from "sweetalert2";
 
-const AddProduct = () => {
-    const { user } = useContext(AuthContext)
+
+const UpdateProduct = () => {
+    const respon = useParams()
     const axiosURL = UseAxios()
 
-    const [imageUrl, setImageUrl] = useState('');
+    const [productData, setProductData] = useState({})
+
+    axiosURL.get(`product/${respon.id}`)
+    .then(res => {
+        setProductData(res.data)
+    })
+
+    // console.log(productData);
+    const { name, brand, price, rating, type, details, image} = productData;
+
+
+
+    const [selectedOption, setSelectedOption] = useState(type);
+
+    const handleSelectChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+
+
+    const [imageUrl, setImageUrl] = useState(image);
     const handleImageUpload = async (event) => {
         const file = event.target.files[0];
         const formData = new FormData();
@@ -22,7 +42,10 @@ const AddProduct = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                setImageUrl(data.data.url);
+                if(data.data.url){
+                    setImageUrl(data.data.url);
+                }
+                
             } else {
                 console.error('Failed to upload image');
             }
@@ -30,17 +53,10 @@ const AddProduct = () => {
             console.error('Error uploading image:', error);
         }
     };
+
     // console.log(imageUrl);
 
-
-    const [selectedOption, setSelectedOption] = useState('education');
-
-    const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
-    };
-
-
-    const handleAddProduct = e => {
+    const handleUpdateProduct = e => {
         e.preventDefault()
         const form = e.target;
         const name = form.name.value;
@@ -50,45 +66,42 @@ const AddProduct = () => {
         const type = form.type.value;
         const details = form.details.value;
         const image = imageUrl;
-        const email = user.email
 
-        const product = { name, brand, price, rating, type, details, image, email }
-        console.log(product);
+        const UpdateProduct = { name, brand, price, rating, type, details, image };
+        console.log(UpdateProduct);
 
-        axiosURL.post('/product', product)
-            .then(res => {
-                console.log(res.data);
-                if (res.data.acknowledged === true) {
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "Your product add Successful",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    form.reset()
-                }
-            })
+        axiosURL.put(`/myproduct/${respon.id}`, UpdateProduct)
+        .then(res => {
+            console.log(res.data);
+            if(res.data.modifiedCount>0){
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Your product update Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        })
     }
-
     return (
         <div>
-            <PageTitle title={'Add-Product'}></PageTitle>
+            <PageTitle title={'Update-Product'}></PageTitle>
             <div className="py-10 px-2 container mx-auto">
                 <div className="bg-slate-100 mx-auto w-full max-w-3xl rounded-md shadow-xl">
-                    <form onSubmit={handleAddProduct} className="card-body">
+                    <form onSubmit={handleUpdateProduct} className="card-body">
                         <div className="flex w-full flex-col md:flex-row gap-5">
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="product name" className="input input-bordered" required />
+                                <input type="text" name="name" defaultValue={name} className="input input-bordered" />
                             </div>
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <input type="text" name="brand" placeholder="brand name" className="input input-bordered" required />
+                                <input type="text" name="brand" defaultValue={brand} className="input input-bordered" />
                             </div>
                         </div>
                         <div className="flex w-full flex-col md:flex-row gap-5">
@@ -96,13 +109,13 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input type="number" name="price" placeholder="price" className="input input-bordered" required />
+                                <input type="number" name="price" defaultValue={price} className="input input-bordered" />
                             </div>
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">
                                     <span className="label-text">Rating</span>
                                 </label>
-                                <input type="number" max={5} min={1} name="rating" placeholder="rating (1-5)" className="input input-bordered" required />
+                                <input type="number" max={5} min={1} name="rating" defaultValue={rating}  className="input input-bordered" />
                             </div>
                         </div>
                         <div className="flex w-full flex-col md:flex-row gap-5">
@@ -110,7 +123,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Product Photo</span>
                                 </label>
-                                <input type="file" className="file-input file-input-bordered w-full" accept="image/*" onChange={handleImageUpload} required />
+                                <input type="file" className="file-input file-input-bordered w-full" accept="image/*" onChange={handleImageUpload} required/>
                             </div>
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">
@@ -131,7 +144,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Details</span>
                                 </label>
-                                <textarea name="details" className="w-full textarea textarea-bordered" placeholder={'product details'}></textarea>
+                                <textarea name="details" className="w-full textarea textarea-bordered"  defaultValue={details}></textarea>
                             </div>
                         </div>
 
@@ -145,4 +158,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;

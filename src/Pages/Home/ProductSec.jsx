@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProductCard from "../../Components/ProductCard";
 import MyBtn from "../../Components/MyBtn";
+import axios from "axios";
+import UseAxios from "../../hooks/UseAxios";
 
 const ProductSec = () => {
     const [products, setProducts] = useState([])
-    useEffect(()=>{
-        fetch('http://localhost:5000/product')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    },[])
+    const axiosURL = UseAxios()
+
+    axiosURL.get('/product')
+        .then(res => {
+            // console.log(res.data);
+            setProducts(res.data)
+        })
+    axios.get
     const limitProduct = products.slice(0, 8)
     return (
         <div className="py-16 px-2 ">
@@ -20,7 +25,7 @@ const ProductSec = () => {
                 </div>
                 <div className="pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {
-                        limitProduct.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
+                        limitProduct.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                     }
                 </div>
                 <div className="text-center text-white mt-10">

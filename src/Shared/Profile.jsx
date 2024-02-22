@@ -2,10 +2,12 @@ import { useContext } from "react";
 import PageTitle from "../Components/PageTitle";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyBtn from "../Components/MyBtn";
+import UseAxios from "../hooks/UseAxios";
 
 const Profile = () => {
     const { user, logOut } = useContext(AuthContext)
     const { displayName, photoURL, email, phoneNumber } = user;
+    const axiosURL = UseAxios()
 
     const handleLogOut = () => {
         logOut()
@@ -16,7 +18,15 @@ const Profile = () => {
     const handleReview = e =>{
         e.preventDefault()
         const comment = e.target.comment.value;
-        console.log(comment);
+        const name = displayName
+        const img = photoURL
+        const review = {comment, name, img}
+        // console.log(review);
+
+        axiosURL.post('/review', review)
+        .then(res => {
+            console.log(res.data);
+        })
     }
     return (
         <div>

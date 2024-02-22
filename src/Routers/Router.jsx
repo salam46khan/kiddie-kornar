@@ -9,6 +9,8 @@ import Login from '../Shared/Login';
 import SignUp from '../Shared/SignUp';
 import PrivateRouter from './PrivateRouter';
 import Profile from '../Shared/Profile';
+import ProductDetails from '../Shared/ProductDetails';
+import UpdateProduct from '../Components/UpdateProduct';
 
 const Router = createBrowserRouter([
     {
@@ -39,6 +41,14 @@ const Router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRouter><Profile></Profile></PrivateRouter>
+            },
+            {
+                path: '/product/:id',
+                element:<PrivateRouter> <ProductDetails></ProductDetails> </PrivateRouter> 
+            },
+            {
+                path: 'myproduct/:id',
+                element: <PrivateRouter> <UpdateProduct></UpdateProduct> </PrivateRouter>
             }
         ]
     }
